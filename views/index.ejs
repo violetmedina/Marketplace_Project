@@ -1,0 +1,162 @@
+<!-- ../public/css/backend.css -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to reMKT! </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--Less styles -->
+   <!-- Other Less css file //different less files has different color scheam
+	<link rel="stylesheet/less" type="text/css" href="themes/less/simplex.less">
+	<link rel="stylesheet/less" type="text/css" href="themes/less/classified.less">
+	<link rel="stylesheet/less" type="text/css" href="themes/less/amelia.less">  MOVE DOWN TO activate
+	-->
+	<!--<link rel="stylesheet/less" type="text/css" href="themes/less/bootshop.less">
+	<script src="themes/js/less.js" type="text/javascript"></script> -->
+
+<!-- Bootstrap style -->
+    <link id="callCss" rel="stylesheet" href="../css/bootstrap.min.css" media="screen"/>
+    <link href="../css/base.css" rel="stylesheet" media="screen"/>
+<!-- Bootstrap style responsive -->
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet"/>
+	<link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+<!-- Google-code-prettify -->
+	<link href="../css/prettify.css" rel="stylesheet"/>
+<!-- fav and touch icons -->
+    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+	<style type="text/css" id="enject"></style>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="../css/font-awesome.css">
+
+</head>
+<body>
+<div id="header">
+<div class="container">
+<div id="welcomeLine" class="row">
+	<div class="span6"><strong>Welcome!</strong></div>
+	<div class="span6">
+	<div class="pull-right">
+		<a href="transactions"><span class="btn btn-mini btn-danger"><img src="../images/ico-cart.png" alt="cart"> [ # ] Items in your cart </span> </a>
+	</div>
+	</div>
+</div>
+<!-- Navbar ================================================== -->
+<div id="logoArea" class="navbar">
+<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</a>
+  <div class="navbar-inner">
+    <a class="brand" href="/"><img src="../images/reMKT_long.png" alt="Bootsshop"/></a>
+		<form class="form-inline navbar-search" method="post" action="products.html" >
+		<input id="srchFld" class="srchTxt" type="text" />
+		<button type="submit" id="submitButton" class="btn btn-danger">Go</button>
+    </form>
+    <ul id="topMenu" class="nav pull-right">
+		<li class="">
+			<a href="/login" role="button" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
+	</li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Header End====================================================================== -->
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+<!-- Sidebar ================================================== -->
+
+<div id="sidebar" class="span3">
+	<div class="well well-small"><a id="myCart" href="/transactions"><img src="../images/ico-cart.png" alt="cart"> ## items in your cart<span class="badge badge-success pull-right">$$$</span></a></div>
+	<ul id="sideManu" class="nav nav-tabs nav-stacked">
+		
+		<% itemsdata.forEach(function(thing){ %>
+		
+		
+		<li class="subMenu open"><a><%= thing.listingName %></a>
+		</li>
+		<% }) %>
+	</ul>
+
+
+	<br/>
+</div>
+
+<!-- Sidebar end=============================================== -->
+		<h4>Latest Products </h4>
+
+		<ul>
+
+
+			<% itemsdata.forEach(function(thing){ %>
+
+			  <li class="span3">
+				<div class="thumbnail">
+
+				<img src='/images/itemPictures/<%= thing.imageURL %>' alt="" width="200vw"/></a>
+
+				<div class="caption">
+				  <h5><%= thing.listingName %> </h5>
+				  <p>
+					<%= thing.listingDescription %>
+				  </p>
+				  <h4 style="text-align:center"><a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$<%= thing.listingPrice %></a></h4>
+				</div>
+				</div>
+			  </li>
+			<% }) %>
+
+
+		  </ul>
+
+
+		</div>
+		</div>
+	</div>
+</div>
+<!-- Footer ================================================================== -->
+	<div  id="footerSection">
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<h5>ACCOUNT</h5>
+				<a href="login">YOUR ACCOUNT</a>
+			 </div>
+			<div class="span3">
+				<h5>INFORMATION</h5>
+				<a href="registration">REGISTRATION</a>
+			 </div>
+
+			<div id="socialMedia" class="span4 pull-right">
+				<h5>Meet the Team</h5>
+				<a href="https://github.com/DezSays"><img width="60" height="60" src="../images/githubLOGO.jpg" title="Dezarea B." alt="Dez"/></a>
+				<a href="https://github.com/trimvu"><img width="60" height="60" src="../images/githubLOGO.jpg" title="Tri V." alt="Tri"/></a>
+				<a href="https://github.com/browneyes303"><img width="60" height="60" src="../images/githubLOGO.jpg" title="Violet M." alt="Violet"/></a>
+				<a href="https://github.com/fdgalvan"><img width="60" height="60" src="../images/githubLOGO.jpg" title="Felipe G." alt="Felipe"/></a>
+			 </div>
+		 </div>
+		<p class="pull-right">Original HTML by &copy; Bootshop</p>
+	</div><!-- Container End -->
+	</div>
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	<script src="themes/js/jquery.js" type="text/javascript"></script>
+	<script src="themes/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="themes/js/google-code-prettify/prettify.js"></script>
+
+	<script src="themes/js/bootshop.js"></script>
+    <script src="themes/js/jquery.lightbox-0.5.js"></script>
+
+</body>
+
+</html>
+
