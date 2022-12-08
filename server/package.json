@@ -9,10 +9,10 @@
     "express-session": "^1.17.2",
     "helmet": "^5.0.2",
     "js": "^0.1.0",
-    "pg": "^8.7.3",
+    "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "pg-promise": "^10.11.1",
-    "sequelize": "^6.18.0"
+    "sequelize": "^6.25.3"
   },
   "name": "backend_project",
   "version": "1.0.0",
@@ -30,5 +30,8 @@
     "url": "https://github.com/DezSays/Backend_Project/issues"
   },
   "homepage": "https://github.com/DezSays/Backend_Project#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sequelize-cli": "^6.5.2"
+  }
 }
