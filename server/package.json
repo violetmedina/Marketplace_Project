@@ -12,7 +12,7 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "pg-promise": "^10.11.1",
-    "sequelize": "^6.25.3"
+    "sequelize": "^6.26.0"
   },
   "name": "backend_project",
   "version": "1.0.0",
@@ -22,14 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DezSays/Backend_Project.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DezSays/Backend_Project/issues"
   },
-  "homepage": "https://github.com/DezSays/Backend_Project#readme",
+  "homepage": "",
   "description": "",
   "devDependencies": {
     "sequelize-cli": "^6.5.2"
