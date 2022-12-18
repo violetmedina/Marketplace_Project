@@ -13,7 +13,7 @@ const SignUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(user)
-        fetch('http://localhost:8080/signup', {
+        fetch('http://localhost:8080/sign-up', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
@@ -37,9 +37,9 @@ return (
 <>
     <div>Sign Up</div>
     <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} placeholder='userName' name='userName'></input>
-        <input type="text" onChange={handleChange} placeholder='firstName' name='firstName'></input>
-        <input type="text" onChange={handleChange} placeholder='lastName' name='lastName'></input>
+        <input type="text" onChange={handleChange} placeholder='user Name' name='username'></input>
+        <input type="text" onChange={handleChange} placeholder='first Name' name='fName'></input>
+        <input type="text" onChange={handleChange} placeholder='last Name' name='lName'></input>
         <input type="text" onChange={handleChange} placeholder='email' name='email'></input>
         <input type="text" onChange={handleChange} placeholder='password' name='password'></input>
         <button type='submit'>Sign Up</button>
