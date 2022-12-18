@@ -24,7 +24,7 @@ const port = 3000;
 const db = require('./models');
 
 app.use(express.static('public'));
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 // app.use(helmet())
 
@@ -45,11 +45,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //routes
-app.use(require('./routes/index'));
-app.use(require('./routes/transactions'));
-app.use(require('./routes/login'));
-app.use(require('./routes/addItems'));
-app.use(require('./routes/registration'));
+// app.use(require('./routes/index'));
+// app.use(require('./routes/transactions'));
+// app.use(require('./routes/login'));
+// app.use(require('./routes/addItems'));
+// app.use(require('./routes/registration'));
 
 
 app.listen(port, ()=>{
